@@ -1,0 +1,22 @@
+{
+  "isPublic": false,
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#F5D1D1",
+  "icon": "line-chart",
+  "slug": "facebook-dash",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedModeThemeId": "620f72e0eb0278799e88c1f1",
+  "editModeThemeId": "620f72e0eb0278799e88c1f1",
+  "createdAt": {
+    "seconds": 1651134980,
+    "nanos": 370000000
+  },
+  "deleted": false
+}
