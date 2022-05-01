@@ -253,7 +253,7 @@
                       "shouldTruncate": false,
                       "borderWidth": "",
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach.data}}",
+                      "text": "{{Sum_reach.data[0][\"reach_sum\"].toLocaleString()}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 48,
                       "disableLink": false,
@@ -586,7 +586,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach_organic.data}}",
+                      "text": "{{Sum_reach_organic.data[0][\"reach_organic\"].toLocaleString()}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 48,
                       "textAlign": "LEFT",
@@ -759,7 +759,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach_paid.data}}",
+                      "text": "{{Sum_reach_paid.data[0][\"reach_paid\"].toLocaleString()}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 49,
                       "textAlign": "LEFT",
@@ -1003,6 +1003,13 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Page1_Domain_reach_sum",
+              "name": "Domain_reach_sum",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Sum_reach",
               "name": "Sum_reach",
               "pluginType": "DB",
@@ -1019,15 +1026,6 @@
             {
               "id": "Page1_Sum_reach_paid",
               "name": "Sum_reach_paid",
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_Domain_reach_sum",
-              "name": "Domain_reach_sum",
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
