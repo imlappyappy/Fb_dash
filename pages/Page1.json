@@ -13,14 +13,14 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 760,
+          "bottomRow": 520,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 51,
-          "minHeight": 660,
+          "minHeight": 530,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -51,6 +51,7 @@
               "setAdaptiveYMin": false,
               "widgetName": "Chart3",
               "allowScroll": false,
+              "dynamicPropertyPathList": [],
               "displayName": "Chart",
               "iconSVG": "/static/media/icon.6adbe31e.svg",
               "topRow": 8,
@@ -112,7 +113,7 @@
                 }
               },
               "key": "dr35rjqp0m",
-              "rightColumn": 31,
+              "rightColumn": 26,
               "widgetId": "2e6pw556p8",
               "isVisible": true,
               "version": 1,
@@ -121,7 +122,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "yAxisName": "Reach Count",
-              "chartName": "Domain_reach_sum",
+              "chartName": "Domain Sum Count",
               "xAxisName": "Domain",
               "chartType": "COLUMN_CHART"
             },
@@ -160,13 +161,13 @@
             {
               "widgetName": "Statbox1",
               "backgroundColor": "white",
-              "rightColumn": 64,
+              "rightColumn": 38,
               "isCanvas": true,
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
               "widgetId": "0gge6gu46d",
-              "topRow": 7,
-              "bottomRow": 20,
+              "topRow": 8,
+              "bottomRow": 21,
               "parentRowSpace": 10,
               "isVisible": true,
               "type": "STATBOX_WIDGET",
@@ -176,7 +177,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 31,
+              "leftColumn": 26,
               "children": [
                 {
                   "widgetName": "Canvas1",
@@ -253,7 +254,7 @@
                       "shouldTruncate": false,
                       "borderWidth": "",
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach.data[0][\"reach_sum\"].toLocaleString()}}",
+                      "text": "{{\nfunction formatB() {\n\tlet n = Sum_reach.data[0][\"reach_sum\"]\n\tif (n > 999999999){\n\t\treturn (n / 1000000000).toFixed(2) + \"B\";\n\t}\n  else if(n > 999999){\n    return (n/1000000).toFixed(2) + \"M\";\n\t}\n\telse{\n\t\treturn n;\n\t}\n}()\n}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 48,
                       "disableLink": false,
@@ -280,10 +281,14 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "",
+                      "text": "{{Date.getTime()}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 37,
                       "textAlign": "LEFT",
@@ -304,8 +309,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634a.svg",
-                      "topRow": 1,
-                      "bottomRow": 9,
+                      "topRow": 2,
+                      "bottomRow": 10,
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -494,13 +499,13 @@
             {
               "widgetName": "Statbox2",
               "backgroundColor": "white",
-              "rightColumn": 64,
+              "rightColumn": 51,
               "isCanvas": true,
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
               "widgetId": "rl7laxk1mj",
-              "topRow": 20,
-              "bottomRow": 33,
+              "topRow": 8,
+              "bottomRow": 21,
               "parentRowSpace": 10,
               "isVisible": true,
               "type": "STATBOX_WIDGET",
@@ -510,7 +515,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 31,
+              "leftColumn": 38,
               "children": [
                 {
                   "widgetName": "Canvas3",
@@ -548,7 +553,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Reach_organic",
+                      "text": "Reach_Organic",
                       "key": "egtyb0uqkp",
                       "rightColumn": 37,
                       "textAlign": "LEFT",
@@ -586,7 +591,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach_organic.data[0][\"reach_organic\"].toLocaleString()}}",
+                      "text": "{{\nfunction formatB() {\n\tlet n = Sum_reach_organic.data[0][\"reach_organic\"]\n\tif (n > 999999999){\n\t\treturn (n / 1000000000).toFixed(2) + \"B\";\n\t}\n  else if(n > 999999){\n    return (n/1000000).toFixed(2) + \"M\";\n\t}\n\telse{\n\t\treturn n;\n\t}\n}()\n}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 48,
                       "textAlign": "LEFT",
@@ -672,8 +677,8 @@
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
               "widgetId": "s34wm35bs8",
-              "topRow": 33,
-              "bottomRow": 46,
+              "topRow": 8,
+              "bottomRow": 21,
               "parentRowSpace": 10,
               "isVisible": true,
               "type": "STATBOX_WIDGET",
@@ -683,7 +688,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 31,
+              "leftColumn": 51,
               "children": [
                 {
                   "widgetName": "Canvas4",
@@ -759,7 +764,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Sum_reach_paid.data[0][\"reach_paid\"].toLocaleString()}}",
+                      "text": "{{\nfunction formatB() {\n\tlet n = Sum_reach_paid.data[0][\"reach_paid\"]\n\tif (n > 999999999){\n\t\treturn (n / 1000000000).toFixed(2) + \"B\";\n\t}\n  else if(n > 999999){\n    return (n/1000000).toFixed(2) + \"M\";\n\t}\n\telse{\n\t\treturn n;\n\t}\n}()\n}}",
                       "key": "egtyb0uqkp",
                       "rightColumn": 49,
                       "textAlign": "LEFT",
@@ -1003,13 +1008,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Domain_reach_sum",
-              "name": "Domain_reach_sum",
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_Sum_reach",
               "name": "Sum_reach",
               "pluginType": "DB",
@@ -1026,6 +1024,15 @@
             {
               "id": "Page1_Sum_reach_paid",
               "name": "Sum_reach_paid",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_Domain_reach_sum",
+              "name": "Domain_reach_sum",
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
