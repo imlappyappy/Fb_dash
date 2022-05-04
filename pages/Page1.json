@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 520,
+          "bottomRow": 610,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -54,8 +54,8 @@
               "dynamicPropertyPathList": [],
               "displayName": "Chart",
               "iconSVG": "/static/media/icon.6adbe31e.svg",
-              "topRow": 8,
-              "bottomRow": 44,
+              "topRow": 22,
+              "bottomRow": 59,
               "parentRowSpace": 10,
               "type": "CHART_WIDGET",
               "hideCard": false,
@@ -122,7 +122,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "yAxisName": "Reach Count",
-              "chartName": "Domain Sum Count",
+              "chartName": "Total Reach Domainwise",
               "xAxisName": "Domain",
               "chartType": "COLUMN_CHART"
             },
@@ -161,7 +161,7 @@
             {
               "widgetName": "Statbox1",
               "backgroundColor": "white",
-              "rightColumn": 38,
+              "rightColumn": 12,
               "isCanvas": true,
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
@@ -177,7 +177,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 26,
+              "leftColumn": 0,
               "children": [
                 {
                   "widgetName": "Canvas1",
@@ -281,14 +281,10 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
+                      "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Date.getTime()}}",
+                      "text": "",
                       "key": "egtyb0uqkp",
                       "rightColumn": 37,
                       "textAlign": "LEFT",
@@ -499,7 +495,7 @@
             {
               "widgetName": "Statbox2",
               "backgroundColor": "white",
-              "rightColumn": 51,
+              "rightColumn": 26,
               "isCanvas": true,
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
@@ -515,7 +511,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 38,
+              "leftColumn": 13,
               "children": [
                 {
                   "widgetName": "Canvas3",
@@ -672,7 +668,7 @@
             {
               "widgetName": "Statbox3",
               "backgroundColor": "white",
-              "rightColumn": 64,
+              "rightColumn": 40,
               "isCanvas": true,
               "displayName": "Stats Box",
               "iconSVG": "/static/media/icon.382a7c7b.svg",
@@ -688,7 +684,7 @@
               "isLoading": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "leftColumn": 51,
+              "leftColumn": 27,
               "children": [
                 {
                   "widgetName": "Canvas4",
@@ -1002,6 +998,148 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "width": 456
+            },
+            {
+              "widgetName": "Select1",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Year",
+              "topRow": 7,
+              "bottomRow": 13,
+              "parentRowSpace": 10,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{\n  \"label\": \"2022\",\n  \"value\": \"2022\"\n}",
+              "animateLoading": true,
+              "parentColumnSpace": 10.4375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 41,
+              "dynamicBindingPathList": [],
+              "options": "[\n  {\n    \"label\": \"2020\",\n    \"value\": \"2020\"\n  },\n  {\n    \"label\": \"2021\",\n    \"value\": \"2021\"\n  },\n  {\n    \"label\": \"2022\",\n    \"value\": \"2022\"\n  }\n]",
+              "labelStyle": "BOLD",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "x6rwyxna01",
+              "labelTextSize": "PARAGRAPH",
+              "isRequired": false,
+              "rightColumn": 61,
+              "widgetId": "dvzxgxck5w",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Select2",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Domain",
+              "topRow": 14,
+              "bottomRow": 20,
+              "parentRowSpace": 10,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{\n  \"label\": \"Pep.ph\",\n  \"value\": \"Pep.ph\"\n}",
+              "animateLoading": true,
+              "parentColumnSpace": 10.4375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 41,
+              "dynamicBindingPathList": [],
+              "options": "[\n  {\n    \"label\": \"Pep.ph\",\n    \"value\": \"Pep.ph\"\n  },\n  {\n    \"label\": \"Smart Parenting\",\n    \"value\": \"Smart Parenting\"\n  },\n  {\n    \"label\": \"spot.ph\",\n    \"value\": \"spot.ph\"\n  }\n]",
+              "labelStyle": "BOLD",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "x6rwyxna01",
+              "isRequired": false,
+              "rightColumn": 61,
+              "widgetId": "lnlwz05tri",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Chart5",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 22,
+              "bottomRow": 59,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "21yykmcmpy": {
+                  "seriesName": "Reach",
+                  "data": "{{Daliy_Page_Reach.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.Reach } })}}"
+                },
+                "a4bass96pa": {
+                  "seriesName": "Reach Organic",
+                  "data": "{{Daliy_Page_Reach.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.Reach_organic } })}}"
+                },
+                "btk8s0s1kp": {
+                  "seriesName": "Reach paid",
+                  "data": "{{Daliy_Page_Reach.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.Reach_paid } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.21yykmcmpy.data"
+                },
+                {
+                  "key": "chartData.a4bass96pa.data"
+                },
+                {
+                  "key": "chartData.btk8s0s1kp.data"
+                }
+              ],
+              "leftColumn": 26,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "kifpxowzwj",
+              "rightColumn": 63,
+              "widgetId": "g1qwkekvqk",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Revenue($)",
+              "chartName": "Daily Page Reach",
+              "xAxisName": "Product Line",
+              "chartType": "LINE_CHART"
             }
           ]
         },
@@ -1031,6 +1169,13 @@
           ],
           [
             {
+              "id": "Page1_Daliy_Page_Reach",
+              "name": "Daliy_Page_Reach",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Domain_reach_sum",
               "name": "Domain_reach_sum",
               "pluginType": "DB",
@@ -1050,6 +1195,7 @@
           "Canvas4",
           "Canvas5",
           "Chart3",
+          "Chart5",
           "Icon1",
           "Icon2",
           "IconButton1",
@@ -1058,6 +1204,8 @@
           "MainContainer",
           "Modal1",
           "Modal2",
+          "Select1",
+          "Select2",
           "Statbox1",
           "Statbox2",
           "Statbox3",
