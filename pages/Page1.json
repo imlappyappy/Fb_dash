@@ -947,8 +947,13 @@
               "width": 456
             },
             {
-              "widgetName": "Select2",
+              "widgetName": "Domain_select",
               "isFilterable": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "Domain",
@@ -961,7 +966,11 @@
               "defaultOptionValue": "",
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "leftColumn": 41,
               "dynamicBindingPathList": [
                 {
@@ -974,13 +983,14 @@
               "isDisabled": false,
               "key": "x6rwyxna01",
               "isRequired": false,
-              "rightColumn": 62,
+              "rightColumn": 63,
               "widgetId": "lnlwz05tri",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "onOptionChange": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}"
             },
             {
               "widgetName": "Chart5",
@@ -1055,12 +1065,12 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "yAxisName": "Revenue($)",
-              "chartName": "Daily Page Reach",
+              "chartName": "Last Month's Page Reach",
               "xAxisName": "Product Line",
               "chartType": "LINE_CHART"
             },
             {
-              "widgetName": "DatePicker1",
+              "widgetName": "Start_Date",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "YYYY-MM-DD",
               "displayName": "DatePicker",
@@ -1095,7 +1105,7 @@
               "maxDate": "2121-12-31T18:29:00.000Z"
             },
             {
-              "widgetName": "DatePicker2",
+              "widgetName": "End_Date",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "DD-MM-YYYY",
               "dynamicPropertyPathList": [
@@ -1129,10 +1139,10 @@
               ],
               "isDisabled": false,
               "key": "kxewt85bnx",
-              "onDateSelected": "{{Domain_reach_sum.data.filter(a => {\n  var date = new Date(a.ProductHits);\n  return (date >= DatePicker1.data && date <= moment();})\n}}",
+              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}",
               "isRequired": false,
               "defaultDate": "{{moment()}}\n",
-              "rightColumn": 62,
+              "rightColumn": 63,
               "widgetId": "hpug1zn8xz",
               "isVisible": true,
               "datePickerType": "DATE_PICKER",
@@ -1228,7 +1238,7 @@
               "text": "Facebook Dashboard",
               "isDisabled": false,
               "key": "1qztvnhr9c",
-              "rightColumn": 62,
+              "rightColumn": 63,
               "isDefaultClickDisabled": true,
               "iconName": "social-media",
               "widgetId": "qp0g1apbp3",
@@ -1252,26 +1262,37 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Page1_Sum_reach",
               "name": "Sum_reach",
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
               "id": "Page1_Sum_reach_organic",
               "name": "Sum_reach_organic",
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
               "id": "Page1_Sum_reach_paid",
               "name": "Sum_reach_paid",
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -1280,14 +1301,19 @@
               "id": "Page1_Daliy_Page_Reach",
               "name": "Daliy_Page_Reach",
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "End_Date.selectedDate"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
               "id": "Page1_Domain_reach_sum",
               "name": "Domain_reach_sum",
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
@@ -1305,8 +1331,8 @@
           "Canvas5",
           "Chart3",
           "Chart5",
-          "DatePicker1",
-          "DatePicker2",
+          "Domain_select",
+          "End_Date",
           "Icon1",
           "Icon2",
           "IconButton1",
@@ -1315,7 +1341,7 @@
           "MainContainer",
           "Modal1",
           "Modal2",
-          "Select2",
+          "Start_Date",
           "Statbox1",
           "Statbox2",
           "Statbox3",

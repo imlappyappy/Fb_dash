@@ -17,14 +17,21 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT sum(reach_paid) as Reach_Paid\nFROM public.smg_dmp_fb_dashboard_unq_view;"
+      "body": "SELECT sum(reach_paid) as Reach_Paid\nFROM public.smg_dmp_fb_dashboard_unq_view WHERE date >= '{{Start_Date.selectedDate}}':: date\n  AND date < '{{End_Date.selectedDate}}':: date;"
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "End_Date.selectedDate",
+      "Start_Date.selectedDate"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
