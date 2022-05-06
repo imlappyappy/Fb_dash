@@ -1073,6 +1073,11 @@
               "widgetName": "Start_Date",
               "minDate": "1920-12-31T18:30:00.000Z",
               "dateFormat": "YYYY-MM-DD",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDateSelected"
+                }
+              ],
               "displayName": "DatePicker",
               "iconSVG": "/static/media/icon.300e5ab8.svg",
               "topRow": 11,
@@ -1083,11 +1088,16 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 10.4375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDateSelected"
+                }
+              ],
               "leftColumn": 41,
               "dynamicBindingPathList": [],
               "isDisabled": false,
               "key": "kxewt85bnx",
+              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}",
               "isRequired": false,
               "defaultDate": "2022-01-01T12:08:06.066+05:30",
               "rightColumn": 51,
