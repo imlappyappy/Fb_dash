@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 760,
+          "bottomRow": 1310,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -1064,9 +1064,9 @@
               "labelOrientation": "auto",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Revenue($)",
+              "yAxisName": "Count",
               "chartName": "Last Month's Page Reach",
-              "xAxisName": "Product Line",
+              "xAxisName": "Date(Day)",
               "chartType": "LINE_CHART"
             },
             {
@@ -1097,7 +1097,7 @@
               "dynamicBindingPathList": [],
               "isDisabled": false,
               "key": "kxewt85bnx",
-              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}",
+              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\nSum_Fan_count.run();\nSum_Mention_Count.run();\nSum_Others_Count.run();\nSum_PagePost_Count.run();\nDomian_activity_count.run();\n})() }}",
               "isRequired": false,
               "defaultDate": "2022-01-01T12:08:06.066+05:30",
               "rightColumn": 51,
@@ -1149,7 +1149,7 @@
               ],
               "isDisabled": false,
               "key": "kxewt85bnx",
-              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}",
+              "onDateSelected": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\nSum_Fan_count.run();\nSum_Mention_Count.run();\nSum_Others_Count.run();\nSum_PagePost_Count.run();\nDomian_activity_count.run();\n})() }}",
               "isRequired": false,
               "defaultDate": "{{moment()}}\n",
               "rightColumn": 63,
@@ -1261,6 +1261,272 @@
               "buttonVariant": "PRIMARY",
               "iconAlign": "left",
               "placement": "CENTER"
+            },
+            {
+              "widgetName": "Chart6",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 60,
+              "bottomRow": 97,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "0bwzl3qzcl": {
+                  "seriesName": "Mention Count",
+                  "data": "{{Sum_Mention_Count.data.map( (obj) =>{ return  {'x': obj.name, 'y': obj.mention_sum } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.0bwzl3qzcl.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "6xb0a5vvwj",
+              "rightColumn": 26,
+              "widgetId": "o7gd32e2ks",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Mention(count)",
+              "chartName": "Mention Count Domainwise",
+              "xAxisName": "Domain",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Chart7",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 97,
+              "bottomRow": 129,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "p5icgralp4": {
+                  "seriesName": "Sales",
+                  "data": "{{Sum_Fan_count.data.map( (obj) =>{ return  {'x': obj.name, 'y': obj.fan_sum } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.p5icgralp4.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "6xb0a5vvwj",
+              "rightColumn": 31,
+              "widgetId": "8mri95hjvc",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Fan(count)",
+              "chartName": "Fan Count Domainwise",
+              "xAxisName": "Domain",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Chart9",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 97,
+              "bottomRow": 129,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "vqcrq2el1d": {
+                  "seriesName": "Sales",
+                  "data": "{{Sum_PagePost_Count.data.map( (obj) =>{ return  {'x': obj.name, 'y': obj.page_post } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.vqcrq2el1d.data"
+                }
+              ],
+              "leftColumn": 31,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "6xb0a5vvwj",
+              "rightColumn": 63,
+              "widgetId": "e9h5wxv02n",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "PagePost(count)",
+              "chartName": "PagePost Count Domainwise",
+              "xAxisName": "Domain",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Chart10",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 60,
+              "bottomRow": 97,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "4vtr520c6v": {
+                  "seriesName": "mention",
+                  "data": "{{Domian_activity_count.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.mention } })}}"
+                },
+                "9lsehdobov": {
+                  "seriesName": "Fan",
+                  "data": "{{Domian_activity_count.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.fan } })}}"
+                },
+                "ir959zj7gb": {
+                  "seriesName": "Page Post",
+                  "data": "{{Domian_activity_count.data.map( (obj) =>{ return  {'x': obj.time, 'y': obj.page_post } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.4vtr520c6v.data"
+                },
+                {
+                  "key": "chartData.9lsehdobov.data"
+                },
+                {
+                  "key": "chartData.ir959zj7gb.data"
+                }
+              ],
+              "leftColumn": 26,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "6xb0a5vvwj",
+              "rightColumn": 63,
+              "widgetId": "jypoimmgre",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Count",
+              "chartName": "Last Month's Activity Count",
+              "xAxisName": "Date",
+              "chartType": "LINE_CHART"
             }
           ]
         },
@@ -1325,6 +1591,46 @@
                 "End_Date.selectedDate"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Domian_activity_count",
+              "name": "Domian_activity_count",
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Sum_Fan_count",
+              "name": "Sum_Fan_count",
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Sum_Mention_Count",
+              "name": "Sum_Mention_Count",
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Sum_PagePost_Count",
+              "name": "Sum_PagePost_Count",
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Start_Date.selectedDate",
+                "End_Date.selectedDate"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],
@@ -1339,8 +1645,12 @@
           "Canvas3",
           "Canvas4",
           "Canvas5",
+          "Chart10",
           "Chart3",
           "Chart5",
+          "Chart6",
+          "Chart7",
+          "Chart9",
           "Domain_select",
           "End_Date",
           "Icon1",
