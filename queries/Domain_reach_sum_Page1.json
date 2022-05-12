@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT name AS name,\n       sum(reach) AS \"reach\",\n       sum(reach_organic) AS \"reach_organic\",\n       sum(reach_paid) AS \"reach_paid\"\nFROM public.smg_dmp_fb_dashboard_unq_view\nWHERE date >= '{{Start_Date.selectedDate}}':: date\n  AND date < '{{End_Date.selectedDate}}':: date\nGROUP BY name\nORDER BY \"reach\" DESC\nLIMIT 10000;",
+      "body": "SELECT name AS name,\n       sum(reach) AS \"reach\",\n       sum(reach_organic) AS \"reach_organic\",\n       sum(reach_paid) AS \"reach_paid\"\nFROM public.smg_dmp_fb_dashboard_unq_view\nWHERE date >= '{{Start_Date.selectedDate}}':: date\n  AND date < '{{End_Date.selectedDate}}':: date\n\tAND name like {{Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\"}}\nGROUP BY name\nORDER BY \"reach\" DESC\nLIMIT 10000;",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -34,6 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\"",
       "End_Date.selectedDate",
       "Start_Date.selectedDate"
     ],

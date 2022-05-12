@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT name AS name,\n\t\t\tsum(fan) as fan_Sum\nFROM public.smg_dmp_fb_dashboard_unq_view WHERE date >= '{{Start_Date.selectedDate}}':: date\n  AND date < '{{End_Date.selectedDate}}':: date\n\tGROUP BY name\n\tORDER BY \"fan_sum\" DESC\nLIMIT 10000;"
+      "body": "SELECT name AS name,\n\t\t\tsum(fan) as fan_Sum\nFROM public.smg_dmp_fb_dashboard_unq_view WHERE date >= '{{Start_Date.selectedDate}}':: date\n  AND date < '{{End_Date.selectedDate}}':: date\n\tAND name like {{Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\"}}\n\tGROUP BY name\n\tORDER BY \"fan_sum\" DESC\nLIMIT 10000;"
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
@@ -29,6 +29,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\"",
       "End_Date.selectedDate",
       "Start_Date.selectedDate"
     ],

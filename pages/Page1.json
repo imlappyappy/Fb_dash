@@ -990,7 +990,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "onOptionChange": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\n})() }}"
+              "onOptionChange": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\nSum_Fan_count.run();\nSum_Mention_Count.run();\nSum_Others_Count.run();\nSum_PagePost_Count.run();\nDomian_activity_count.run();\n})() }}"
             },
             {
               "widgetName": "Chart5",
@@ -1547,7 +1547,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1557,7 +1558,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1567,7 +1569,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             }
@@ -1578,7 +1581,8 @@
               "name": "Daliy_Page_Reach",
               "pluginType": "DB",
               "jsonPathKeys": [
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1588,7 +1592,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1598,7 +1603,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1608,7 +1614,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1618,7 +1625,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1628,7 +1636,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Start_Date.selectedDate",
-                "End_Date.selectedDate"
+                "End_Date.selectedDate",
+                "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
               "timeoutInMillisecond": 10000
             }
