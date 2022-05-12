@@ -99,9 +99,9 @@
               "labelOrientation": "auto",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Reach Count",
+              "yAxisName": "",
               "chartName": "Total Reach Domainwise",
-              "xAxisName": "Domain",
+              "xAxisName": "",
               "chartType": "COLUMN_CHART"
             },
             {
@@ -993,6 +993,7 @@
               "onOptionChange": "{{ ( () => {\nDomain_reach_sum.run();\nSum_reach.run();\nSum_reach_organic.run();\nSum_reach_paid.run();\nDaliy_Page_Reach.run();\nSum_Fan_count.run();\nSum_Mention_Count.run();\nSum_Others_Count.run();\nSum_PagePost_Count.run();\nDomian_activity_count.run();\n})() }}"
             },
             {
+              "setAdaptiveYMin": false,
               "widgetName": "Chart5",
               "allowScroll": false,
               "displayName": "Chart",
@@ -1061,18 +1062,18 @@
               "isVisible": true,
               "version": 1,
               "parentId": "0",
-              "labelOrientation": "auto",
+              "labelOrientation": "slant",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Count",
-              "chartName": "Last Month's Page Reach",
+              "yAxisName": "",
+              "chartName": "Last Month's Daily Reach",
               "xAxisName": "Date(Day)",
               "chartType": "LINE_CHART"
             },
             {
               "widgetName": "Start_Date",
               "minDate": "1920-12-31T18:30:00.000Z",
-              "dateFormat": "YYYY-MM-DD",
+              "dateFormat": "DD-MM-YYYY",
               "dynamicPropertyPathList": [
                 {
                   "key": "onDateSelected"
@@ -1320,9 +1321,9 @@
               "labelOrientation": "auto",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Mention(count)",
+              "yAxisName": "",
               "chartName": "Mention Count Domainwise",
-              "xAxisName": "Domain",
+              "xAxisName": "",
               "chartType": "COLUMN_CHART"
             },
             {
@@ -1337,7 +1338,7 @@
               "hideCard": false,
               "chartData": {
                 "p5icgralp4": {
-                  "seriesName": "Sales",
+                  "seriesName": "Fan",
                   "data": "{{Sum_Fan_count.data.map( (obj) =>{ return  {'x': obj.name, 'y': obj.fan_sum } })}}"
                 }
               },
@@ -1383,9 +1384,9 @@
               "labelOrientation": "auto",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Fan(count)",
+              "yAxisName": "",
               "chartName": "Fan Count Domainwise",
-              "xAxisName": "Domain",
+              "xAxisName": "",
               "chartType": "COLUMN_CHART"
             },
             {
@@ -1400,7 +1401,7 @@
               "hideCard": false,
               "chartData": {
                 "vqcrq2el1d": {
-                  "seriesName": "Sales",
+                  "seriesName": "PagePost",
                   "data": "{{Sum_PagePost_Count.data.map( (obj) =>{ return  {'x': obj.name, 'y': obj.page_post } })}}"
                 }
               },
@@ -1446,9 +1447,9 @@
               "labelOrientation": "auto",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "PagePost(count)",
+              "yAxisName": "",
               "chartName": "PagePost Count Domainwise",
-              "xAxisName": "Domain",
+              "xAxisName": "",
               "chartType": "COLUMN_CHART"
             },
             {
@@ -1520,12 +1521,12 @@
               "isVisible": true,
               "version": 1,
               "parentId": "0",
-              "labelOrientation": "auto",
+              "labelOrientation": "slant",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "yAxisName": "Count",
+              "yAxisName": "",
               "chartName": "Last Month's Activity Count",
-              "xAxisName": "Date",
+              "xAxisName": "Date(Day)",
               "chartType": "LINE_CHART"
             }
           ]
@@ -1602,7 +1603,6 @@
               "name": "Domian_activity_count",
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Start_Date.selectedDate",
                 "End_Date.selectedDate",
                 "Domain_select.selectedOptionValue ? Domain_select.selectedOptionValue : \"%\""
               ],
